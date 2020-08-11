@@ -1,0 +1,43 @@
+ #menu {
+    /* margin-bottom: 170px; */
+  }
+  @media screen and (max-width: 768px) {
+    #menu {
+      /* margin-bottom: 50px; */
+    }
+  }
+  #menu {
+    color: #fff;
+    /* font-family: "Satisfy", cursive; */
+  }
+  #menu .fh5co-item-wrap{
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  #menu .menu-item,  .fh5co-item {
+    float: left;
+    width: 100%;
+    /* background: #fff; */
+  }
+  #menu .menu-item.margin_top {
+    margin-top: 150px;
+  }
+  @media screen and (max-width: 480px) {
+    #menu .menu-item.margin_top {
+      margin-top: 0;
+    }
+  }
+  #menu .menu-item h3 {
+    margin-bottom: 0px;
+    color: #fff;
+  }
+  #menu .menu-item #price {
+    font-style: 20px;
+    color: #fee856;
+    margin-bottom: 20px;
+    /* font-size: 30px; */
+    display: block;
+  }
+  #menu .menu-item img {
+    margin-bottom: 30px;
+  }
