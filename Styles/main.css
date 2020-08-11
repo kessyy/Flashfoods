@@ -333,3 +333,7 @@ ul li.active a{
 .social-icon:hover:after{
     transform: translate(0) scale(1.2);
 }
+.flex {
+    display: flex;
+    flex-wrap: wrap;
+  }
