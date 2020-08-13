@@ -5,7 +5,7 @@ body {
     box-sizing: border-box; 
     font-family: 'icomoon';
     font-style: oblique;
-    overflow: hidden;
+    /* overflow: hidden; */
     color: #fff;
   }
 h1{
@@ -17,7 +17,7 @@ h1{
     background-color: #131414;
     /* background-image: url(../images/background.jpg); */
     transform-style: preserve-3d; 
-    overflow: hidden;
+    /* overflow: hidden; */
 }
 .navbar{ 
     position: fixed; 
@@ -72,14 +72,14 @@ h1{
 
 .bar::after{ transform: translateY(9px); }
 
-.banner{ overflow: hidden; }
+/* .banner{ overflow: hidden; } */
 
 .main{ 
     position: relative; 
     width: 100%; 
     left: 0; 
     z-index: 5;
-    overflow: hidden; 
+    /* overflow: hidden;  */
     transform-origin: left; 
     transform-style: preserve-3d; 
     transition: 0.5s;

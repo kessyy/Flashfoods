@@ -1,0 +1,122 @@
+body {
+    background: #000 url(../images/background.png) repeat;
+    width: 100%;
+    height: 100%;
+    padding:0; 
+    margin: 0; 
+    box-sizing: border-box; 
+    font-family: 'icomoon';
+    font-style: oblique;
+    color: #fff;
+}
+.form-container{ 
+    position: relative; 
+    width: 100%; 
+    left: 0; 
+    z-index: 5;
+    transform-origin: left; 
+    transform-style: preserve-3d; 
+    transition: 0.5s;
+}
+.container.active .form-container{
+    animation: main-animation 0.5s ease; 
+    cursor: pointer;
+    transform: perspective(1300px) rotateY(20deg) translateY(10px) 
+                translateZ(310px) scale(0.5);
+}
+@keyframes main-animation{
+    from{ transform: translate(0); }
+    to{
+        transform: perspective(1300px) rotateY(20deg) translateY(10px) 
+                    translateZ(310px) scale(0.5);
+    }
+}
+.container.active .form-container:hover + .shadow.one{
+    transform: perspective(1300px) rotateY(20deg) translateY(10px) 
+                translateZ(230px) scale(0.5);
+}
+.container.active .form-container:hover{
+    transform: perspective(1300px) rotateY(20deg) translateY(10px) 
+                translateZ(340px) scale(0.5);
+}
+.contact-form{
+    font-size: 20px;
+    top: 20%;
+    padding: 70px 0 50px 0;
+    position: absolute; 
+    width: 100%; 
+    height: 100%; 
+    justify-content: center; 
+    align-items: center;
+    flex-direction: column; 
+    
+}
+
+.contact-form form {
+    display: table;
+    margin: 0 auto;
+    
+}
+.social-icons {
+    width: 100%;
+    display: -webkit-flex;
+    display:flex;
+    align-items: center;
+    justify-content: center;
+}
+.social-icon{
+    display: -webkit-flex;
+    display: flex;
+    position: relative;
+    overflow: hidden;
+    width: 50px;
+    height: 50px;
+    margin: 8px;
+    background-color: #fff5ee;
+    border-radius: 50%;
+    box-shadow:0 1px 3px rgba(0,0,0,0.12);
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+.social-icon i{
+    margin: auto;
+    font-size: 24px;
+    color: rgb(3, 149, 185);
+    z-index: 1;
+    transition: all 0.3s ease;
+}
+.social-icon:after{
+    content: "";
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    transform: translate(0, 50px);
+    border-radius: 50%;
+    transition: all 0.3s ease;
+}
+.social-icon .facebook:after{
+    background-color: #1769ff;
+}
+.social-icon .twitter:after{
+    background-color: #1da1f2;
+}
+.social-icon .instagram:after{
+    background-color: #5851db;
+}
+.social-icon .github:after{
+    background-color: #24292e;
+}
+.social-icon:hover{
+    transform: translate(-4px);
+    box-shadow: 0 4px 12 px rgba(0,0,0,0.16);
+}
+/* .social-icon:hover i{
+    color: #fff;
+} */
+.social-icon:hover:after{
+    transform: translate(0) scale(1.2);
+}
+/* .flex {
+    display: flex;
+    flex-wrap: wrap;
+  } */

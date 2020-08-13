@@ -29,7 +29,7 @@
     <meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
     <meta name="theme-color" content="#ffffff">
     <title>Flashy Foods</title>
-
+    <link rel="stylesheet" href="Styles/contact.css">
     <link rel="stylesheet" href="Styles/main.css">
 </head>
 <body>
@@ -42,20 +42,14 @@
                 </div>
             </div>
         </div>
-        <div class="banner">
-            <div class="main">
-<header>
-                
-    <section class="contact-form">
-
-    <h1 class=" font-weight-bold text-center ">Contact us</h1>
-    <p class="text-center">Don't be shy, let's chat.</p>
-    <div class="row">
-        <div class="col-md-9">
-
+        <div class="contact-form">
+            <div class="form-container">
             <form id="contact-form" method="post" action="contact.php" role="form">
 
-                <div class="messages"></div>
+                <div class="form-header">
+                    <h2> We love to chat</h2>
+                    <h1>Send us a message</h1>
+                </div>
             
                 <div class="controls">
             
@@ -85,7 +79,7 @@
                         </div>
                         <div class="col-md-6">
                             <div class="form-group">
-                                <label for="form_need">Please specify your need *</label>
+                                <label for="form_need">Specify your need *</label>
                                 <select id="form_need" name="need" class="form-control" required="required" data-error="Please specify your need.">
                                     <option value=""></option>
                                     <option value="Request order status">Request order status</option>
@@ -104,15 +98,13 @@
                                 <div class="help-block with-errors"></div>
                             </div>
                         </div>
-                        <div class="text-center text-md-left">
+                        <div class="text-center">
                             <a class="btn btn-primary" onclick="document.getElementById('contact-form').submit();">Send</a>
                         </div>
                     </div>
                 </div>
             
-            </form>
             
-
             
             <div class=" social-icons">
                 <a class="social-icon facebook" target="_blank" href="#">
@@ -128,13 +120,7 @@
                     <i class="fa fa-github"></i>
                 </a>
             </div>
-        </div>
-        <!--Grid column-->
-    </div>
-
-</section>
-<!--Section: Contact v.2-->
-                </header>
+            </form> 
             </div>
             <div class="shadow one"></div>
             <div class="shadow two"></div>
