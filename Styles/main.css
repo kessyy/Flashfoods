@@ -5,7 +5,6 @@ body {
     box-sizing: border-box; 
     font-family: 'icomoon';
     font-style: oblique;
-    /* overflow: hidden; */
     color: #fff;
   }
 h1{
@@ -17,7 +16,6 @@ h1{
     background-color: #131414;
     /* background-image: url(../images/background.jpg); */
     transform-style: preserve-3d; 
-    /* overflow: hidden; */
 }
 .navbar{ 
     position: fixed; 
@@ -39,7 +37,7 @@ h1{
 .logo{
     font-size: 30px;
     text-transform: uppercase;
-    color: rgb(3, 149, 185);
+    color: #fff;
     letter-spacing: 2px; 
     line-height: 4rem; 
     margin-top: 20px;
@@ -108,7 +106,11 @@ header{
     width: 50%;
     font-size: 40px;
 }
-.btn{ margin-top: 1rem; 
+.description span{
+    color: rgb(3, 149, 185);
+}
+.btn{ 
+    margin-top: 1rem; 
     padding: 0.6rem 1.8rem;
     background-color: rgb(3, 149, 185); 
     border: none; 
@@ -150,6 +152,7 @@ header{
     align-items: center;
     margin-left: 10px;
 }
+
 ul{ 
     list-style: none;
  }
@@ -247,93 +250,87 @@ ul li.active a{
     transform: perspective(1300px) rotateY(20deg) translateY(10px) 
                 translateZ(340px) scale(0.5);
 }
-.contact-form{
-    font-size: 20px;
-    
-    padding: 50px 0 50px 0;
-    /* background: #fff; */
-    /* color: rgb(3, 149, 185); */
-    position: absolute; 
-    width: 100%; 
-    height: 100%; 
-    /* top: 0;
-    left: 0; 
-    display: flex;  */
-    justify-content: center; 
-    align-items: center;
-    flex-direction: column; 
-    /* color: #fff; */
-    
-}
-.contact-form h1{
-    text-transform: uppercase;
 
-}
-.contact-form form {
-    display: table;
-    margin: 0 auto;
+
+/* Media Queries */
+  
+
+@media (max-width: 360px) {
+    .container.active .main{
+        animation: main-animation 0.5s ease; 
+        cursor: pointer;
+        transform: perspective(2000px) rotateY(10deg) translateY(8px) 
+                    translateZ(200px) scale(0.5);
+    }
+    @keyframes main-animation{
+        from{ transform: translate(0); }
+        to{
+            transform: perspective(2000px) rotateY(10deg) translateY(8px) 
+                        translateZ(200px) scale(0.5);
+        }
+    }
+    .container.active .main:hover + .shadow.one{
+        transform: perspective(2000px) rotateY(10deg) translateY(8px) 
+                    translateZ(150px) scale(0.5);
+    }
+    .container.active .main:hover{
+        transform: perspective(2000px) rotateY(10deg) translateY(8px) 
+                    translateZ(250px) scale(0.5);
+    }
     
+    .shadow{ 
+        position: absolute; 
+        width: 100%; 
+        height: 100vh; 
+        top: 0;
+        left: 0; 
+        transform-style: preserve-3d; 
+        transform-origin:left;
+        transition: 0.5s; 
+        background-color: #fff; 
+    }
+    .shadow.one{ 
+        z-index: -1; 
+        opacity: 0.10; 
+    }
+    .shadow.two{ 
+        z-index: -2; 
+        opacity: 0.05; 
+    }
+    .container.active .shadow.one{
+        animation: shadow-one 0.6s ease-out;
+        transform: perspective(2500px) rotateY(10deg) translateY(8px) 
+                    translateZ(150px) scale(0.5);
+    }
+    @keyframes shadow-one{
+        0%{
+            transform: translate(0);
+        }
+        5%{
+            transform: perspective(2500px) rotateY(10deg) translateY(8px) 
+                        translateZ(250px) scale(0.5);
+        }
+        100%{
+            transform: perspective(2000px) rotateY(10deg) translateY(8px) 
+                        translateZ(200px) scale(0.5);
+        }
+    }
+    .container.active .shadow.two{
+        animation: shadow-two 0.6s ease-out;
+        transform: perspective(800px) rotateY(10deg) translateY(8px) 
+                    translateZ(100px) scale(0.5);
+    }
+    @keyframes shadow-two{
+        0%{
+            transform: translate(0);
+        }
+        20%{
+            transform: perspective(1000px) rotateY(10deg) translateY(8px) 
+                        translateZ(250px) scale(0.5);
+        }
+        100%{
+            transform: perspective(1500px) rotateY(10deg) translateY(8px) 
+                        translateZ(100px) scale(0.5);
+        }
+    }
 }
-.social-icons {
-    width: 100%;
-    display: -webkit-flex;
-    display:flex;
-    align-items: center;
-    justify-content: center;
-}
-.social-icon{
-    display: -webkit-flex;
-    display: flex;
-    position: relative;
-    overflow: hidden;
-    width: 50px;
-    height: 50px;
-    margin: 8px;
-    background-color: #fff5ee;
-    border-radius: 50%;
-    box-shadow:0 1px 3px rgba(0,0,0,0.12);
-    text-decoration: none;
-    transition: all 0.3s ease;
-}
-.social-icon i{
-    margin: auto;
-    font-size: 24px;
-    color: rgb(3, 149, 185);
-    z-index: 1;
-    transition: all 0.3s ease;
-}
-.social-icon:after{
-    content: "";
-    width: 50px;
-    height: 50px;
-    position: absolute;
-    transform: translate(0, 50px);
-    border-radius: 50%;
-    transition: all 0.3s ease;
-}
-.social-icon .facebook:after{
-    background-color: #1769ff;
-}
-.social-icon .twitter:after{
-    background-color: #1da1f2;
-}
-.social-icon .instagram:after{
-    background-color: #5851db;
-}
-.social-icon .github:after{
-    background-color: #24292e;
-}
-.social-icon:hover{
-    transform: translate(-4px);
-    box-shadow: 0 4px 12 px rgba(0,0,0,0.16);
-}
-/* .social-icon:hover i{
-    color: #fff;
-} */
-.social-icon:hover:after{
-    transform: translate(0) scale(1.2);
-}
-.flex {
-    display: flex;
-    flex-wrap: wrap;
-  }
